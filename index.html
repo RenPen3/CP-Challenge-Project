@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodingPhase Challenge Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <style>
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-items {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-items a {
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-items a:hover {
+      color: #333;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .login-btn {
+      color: #333;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: #f5f5f5;
+    }
+
+    .signup-btn {
+      background: #333;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .signup-btn:hover {
+      background: #444;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: #333;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-items {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .auth-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .login-btn,
+      .signup-btn {
+        display: block;
+        text-align: center;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+  </style>
+
+  <body>
+    <!-- <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <a href="/">SaaSify</a>
+        </div>
+
+        <div class="nav-links">
+          <ul class="nav-items">
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#features">Features</a></li>
+          </ul>
+
+          <div class="auth-buttons">
+            <a href="/login" class="login-btn">Log in</a>
+            <a href="/signup" class="signup-btn">Sign up</a>
+          </div>
+        </div>
+
+        <button class="mobile-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header> -->
+
+
+
+    <script>
+      document.querySelector('.mobile-menu').addEventListener('click', function () {
+        this.classList.toggle('active');
+        document.querySelector('.nav-links').classList.toggle('active');
+      });
+    </script>
+
+
+
+    <header class="nav">
+      <div class="nav-content">
+        <div>
+          <a class="nav-logo" href="#">Logo</a>
+        </div>
+        <div>
+          <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <a class="nav-btn" href="#">My Work</a>
+          <a href="#" class="mobile-ham">
+            <div class="mobile-lines line1"></div>
+            <div class="mobile-lines line2"></div>
+            <div class="mobile-lines line3"></div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-bg-image"></div>
+        <!-- <video
+          class="hero-vid"
+          src="assets/video/bg-vid.mp4"
+          frameborder="0"
+          autoplay="1"
+          loop="1"
+        ></video> -->
+        <div class="hero-content">
+          <div class="hero-content-text">
+            <h1>Bring Home the Taste of<span> Thanksgiving</span>
+            </h1>
+            <p>Family-friendly recipes crafted for your holiday table.</p>
+            <!-- <a class="hero-btn" href="#">Button</a> -->
+          </div>
+        </div>
+        <div class="hero-bottom-image">
+          <img src="assets/img/hero_img_1.jpg" alt="hero image" />
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="cards-header">
+          <div>
+            <h2>PopularThanksgiving Recipes <span
+                style="font-size: 1.2rem;font-weight: 400;color: #555555;"> | Lorem ipsum dolor sit
+                amet consectetur
+                adipisicing elit. Quisquam, quos</span></h2>
+          </div>
+          <div>
+            <a class="cards-btn" href="#">View All</a>
+          </div>
+
+        </div>
+
+        <div class="cards-content"></div>
+      </section>
+
+      <section class="grid">
+        <div class="grid-content">
+          <div class="grid-image grid-image1">
+            <img src="assets/img/image1.jpg" alt="image box 1" />
+          </div>
+          <div class="grid-image grid-image2">
+            <img src="assets/img/image1.jpg" alt="image box 2" />
+          </div>
+          <div class="grid-image grid-image3">
+            <img src="assets/img/image1.jpg" alt="image box 3" />
+          </div>
+          <div class="grid-image grid-image4">
+            <img src="assets/img/image1.jpg" alt="image box 4" />
+          </div>
+        </div>
+      </section>
+
+      <section class="banner1">
+        <div class="banner1-bg-image"></div>
+        <div class="banner1-content">
+          <div class="banner1-text">
+            <h2>Banner Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+          <a class="banner1-btn" href="#">Button</a>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about-content">
+          <div class="about-left">
+            <img class="about-image" src="assets/img/image1.jpg" alt="image box 1" />
+            <img class="about-image about-image--2" src="assets/img/image1.jpg" alt="image box 2" />
+          </div>
+          <div class="about-right">
+            <h2>About us</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium quos consequatur fugiat? Illum qui, aliquid harum
+              corporis deserunt rem necessitatibus iste, totam, voluptates nihil
+              fugit?.<br /><br />Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Accusantium quos consequatur fugiat? Illum qui,
+              aliquid harum corporis deserunt rem necessitatibus iste, totam,
+              voluptates nihil fugit?.
+            </p>
+            <div class="about-options">
+              <div class="about-options-card">
+                <img class="about-options-image" src="https://placehold.co/20x20/f1f1f1/000"
+                  alt="icon image 1" />
+                <div class="about-options-text">
+                  <h3>Card 1</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+              </div>
+              <div class="about-options-card">
+                <img class="about-options-image" src="https://placehold.co/20x20/f1f1f1/000"
+                  alt="icon image 2" />
+                <div class="about-options-text">
+                  <h3>Card 2</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+              </div>
+              <div class="about-options-card">
+                <img class="about-options-image" src="https://placehold.co/20x20/f1f1f1/000"
+                  alt="icon image 3" />
+                <div class="about-options-text">
+                  <h3>Card 3</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+              </div>
+            </div>
+            <a class="about-btn about-btn--1" href="#">Button 1</a>
+            <a class="about-btn about-btn--2" href="#">Button 2</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-sign-up">
+          <h3>Don't miss out!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            consequatur eos repellendus reprehenderit cupiditate sapiente rerum.
+          </p>
+          <form class="footer-form">
+            <input type="email" placeholder="Your email here" />
+            <button class="footer-btn" type="button">Sign up</button>
+          </form>
+        </div>
+
+        <div class="footer-menu">
+          <div class="footer-box">
+            <div class="footer-box">
+              <h4>Products</h4>
+              <ul class="footer-nav">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+            <h4>About us</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-box">
+            <h4>Services</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-box">
+            <h4>Contact</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <div class="footerBottom-content">
+          <a href="#">
+            <img class="footerBottom-image" src="https://placehold.co/600x400?text=Your+Logo"
+              alt="Footer Image" />
+          </a>
+          <ul class="footerBottom-nav">
+            <li><a style="color: #000" href="#">Link 1</a></li>
+            <li><a style="color: #000" href="#">Link 2</a></li>
+            <li><a style="color: #000" href="#">Link 3</a></li>
+            <li><a style="color: #000" href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p class="footerBottom-rights"></p>
+        &copy;2025 My Starter Kit. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+
+</html>
