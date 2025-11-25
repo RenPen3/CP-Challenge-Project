@@ -1,7 +1,7 @@
 export const cards = [
   {
     image:
-      "https://placehold.co/1200x800/333/222222",
+      "assets/img/turkey-img.jpg",
     alt: "Image 1",
     heading: "Turkey",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
@@ -9,7 +9,7 @@ export const cards = [
   },
   {
     image:
-      "https://placehold.co/1200x800/333/222222",
+      "assets/img/stuffing-img.jpg",
     alt: "Image 2",
     heading: "Stuffing",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
@@ -17,33 +17,33 @@ export const cards = [
   },
   {
     image:
-      "https://placehold.co/1200x800/333/222222",
-    alt: "Image 3",
-    heading: "Sweet Potatoes",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "",
+    alt: "",
+    heading: "Holiday Gathering Favorites",
+    body: "Thanksgiving is all about sharing good food with the people you love. Explore comforting, crowd-pleasing recipes perfect for any holiday table.",
     cta: "Button 3",
   },
   {
     image:
-      "https://placehold.co/1200x800/333/222222",
-    alt: "Image 4",
-    heading: "Pies",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "",
+    alt: "",
+    heading: "Fall Harvest Inspiration",
+    body: "Bring the flavors of the season to life with cozy, autumn-inspired dishes. These recipes reflect the richness and warmth of the Thanksgiving harvest.",
     cta: "Button 4",
   },
   {
     image:
-      "https://placehold.co/1200x800/333/222222",
+      "assets/img/sweet-img.jpg",
     alt: "Image 5",
-    heading: "Seasonal Drinks",
+    heading: "Sweet Potatoes",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     cta: "Button 5",
   },
   {
     image:
-      "https://placehold.co/1200x800/333/222222",
+      "assets/img/pies-img.jpg",
     alt: "Image 6",
-    heading: "Secret Recipe",
+    heading: "Pies & Desserts",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     cta: "Button 6",
   },

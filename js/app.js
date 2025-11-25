@@ -8,8 +8,7 @@ const displayCard = cards
           <a href="#"><img src="${card.image}" alt="${card.alt}" /></a>
           <div class="cards-body">
           <h3 class="cards-title">${card.heading}</h3>
-          <p class="cards-text">${card.body}</p>
-          
+         
           </div>
         </div>`;
   })
@@ -17,3 +16,4 @@ const displayCard = cards
 
 document.querySelector(".cards-content").innerHTML = displayCard;
 {/* <a class="cards-btn" href="#">${card.cta}</a> */ }
+{/* <p class="cards-text">${card.body}</p> */ }
