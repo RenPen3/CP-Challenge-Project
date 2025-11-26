@@ -7,13 +7,17 @@ const displayCard = cards
         <div class="cards-content__box cards-content__box--1">
           <a href="#"><img src="${card.image}" alt="${card.alt}" /></a>
           <div class="cards-body">
-          <h3 class="cards-title">${card.heading}</h3>
-         
+          <span class="cards-heart-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676a.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></span>
+            <h3 class="cards-title">${card.heading}</h3>
           </div>
         </div>`;
   })
   .join("");
 
 document.querySelector(".cards-content").innerHTML = displayCard;
-{/* <a class="cards-btn" href="#">${card.cta}</a> */ }
-{/* <p class="cards-text">${card.body}</p> */ }
+{
+  /* <a class="cards-btn" href="#">${card.cta}</a> */
+}
+{
+  /* <p class="cards-text">${card.body}</p> */
+}
