@@ -21,3 +21,42 @@ document.querySelector(".cards-content").innerHTML = displayCard;
 {
   /* <p class="cards-text">${card.body}</p> */
 }
+
+(function () {
+  const track = document.querySelector(".carousel__track");
+  const slides = Array.from(document.querySelectorAll(".carousel__slide"));
+  const nextButton = document.querySelector(".carousel__button--next");
+  const prevButton = document.querySelector(".carousel__button--prev");
+  const dotsNav = document.querySelector(".carousel__dots");
+  const dots = Array.from(document.querySelectorAll(".carousel__dot"));
+  let current = 0;
+  function updateCarousel() {
+    track.style.transform = `translateX(-${current * 100}vw)`;
+    slides.forEach((slide, idx) =>
+      slide.classList.toggle("carousel__slide--active", idx === current)
+    );
+    dots.forEach((dot, idx) =>
+      dot.classList.toggle("carousel__dot--active", idx === current)
+    );
+  }
+  nextButton.addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    updateCarousel();
+  });
+  prevButton.addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+  dots.forEach((dot, idx) => {
+    dot.addEventListener("click", () => {
+      current = idx;
+      updateCarousel();
+    });
+  });
+  window.addEventListener("resize", updateCarousel);
+})();
+
+document.querySelector(".mobile-menu").addEventListener("click", function () {
+  this.classList.toggle("active");
+  document.querySelector(".nav-links").classList.toggle("active");
+});

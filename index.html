@@ -179,12 +179,7 @@
 
 
 
-    <script>
-      document.querySelector('.mobile-menu').addEventListener('click', function () {
-        this.classList.toggle('active');
-        document.querySelector('.nav-links').classList.toggle('active');
-      });
-    </script>
+    
 
 
 
@@ -317,27 +312,50 @@
         </div>
       </section>
 
-     
-
       <section class="about">
         <div class="about-content">
           <div class="about-left">
-            <img class="about-image" src="assets/img/image1.jpg" alt="image box 1" />
-            <img class="about-image about-image--2" src="assets/img/image1.jpg" alt="image box 2" />
+            <img class="about-image" src="assets/img/creamy_potatoes_img.jpg" alt="image box 1" />
+            <!-- <img class="about-image about-image--2" src="assets/img/image1.jpg" alt="image box 2" /> -->
           </div>
           <div class="about-right">
-            <h2>About us</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium quos consequatur fugiat? Illum qui, aliquid harum
-              corporis deserunt rem necessitatibus iste, totam, voluptates nihil
-              fugit?.<br /><br />Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Accusantium quos consequatur fugiat? Illum qui,
-              aliquid harum corporis deserunt rem necessitatibus iste, totam,
-              voluptates nihil fugit?.
-            </p>
-            <div class="about-options">
+            <h3>Featured Thanksgiving Classic</h3>
+            <h2>Classic Creamy Mashed Potatoes</h2>
+            <h4>Ingredients</h4>
+
+            <ul class="about-cooking-list">
+              <li>3 lbs Yukon Gold or Russet potatoes, peeled and quartered 3 lbs Yukon Gold or Russet potatoes, peeled and quartered</li>
+              <li>1 cup whole milk (warm)</li>
+              <li>6 tbsp unsalted butter</li>
+              <li>1 tsp salt (plus more to taste)</li>
+              <li>½ tsp black pepper</li>
+              <li>2 cloves garlic (optional, for garlic mashed potatoes)</li>
+              <li>Fresh herbs for garnish (optional: parsley or chives)</li>
+            </ul>
+            <h4>Instructions</h4>
+            <ol class="about-cooking-list">
+              <li><strong>Boil the potatoes</strong><br />
+                Place potatoes in a large pot, cover with cold salted water, and bring to a boil. Cook for 15–20 minutes until fork-tender.</li>
+              <li><strong> Warm the milk and butter</strong><br />
+                In a small saucepan, gently heat the milk and butter until melted and warm (do not boil).
+              <li><strong>Mash the potatoes</strong><br />
+                Drain the potatoes and return them to the pot. Mash until smooth using a potato masher or hand mixer.</li>
+              <li><strong>Make it creamy</strong><br />
+                Slowly pour in the warm milk and butter mixture while mixing until creamy and fluffy.</li>
+              <li><strong>Season and serve</strong><br />
+                Add salt, pepper, and optional garlic. Taste and adjust seasoning. Garnish with fresh herbs if desired.</li>
+            </ol>
+
+            <h4>Why You’ll Love It</h4>
+            <ul class="about-cooking-list">
+              <li>✔ Creamy texture</li>
+              <li>✔ Crowd-pleasing classic</li>
+              <li>✔ Perfect with gravy, turkey, and stuffing</li>
+              <li>✔ Easy to make ahead for Thanksgiving prep</li>
+            </ul>
+
+
+            <!-- <div class="about-options">
               <div class="about-options-card">
                 <img class="about-options-image" src="https://placehold.co/20x20/f1f1f1/000"
                   alt="icon image 1" />
@@ -362,17 +380,48 @@
                   <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
               </div>
-            </div>
-            <a class="about-btn about-btn--1" href="#">Button 1</a>
-            <a class="about-btn about-btn--2" href="#">Button 2</a>
+            </div> -->
+            <!-- <a class="about-btn about-btn--1" href="#">Cook This Recipe</a> -->
+            <!-- <a class="about-btn about-btn--2" href="#">Button 2</a> -->
           </div>
         </div>
       </section>
+
+      <section class="carousel">
+        <div class="carousel__track">
+          <div class="carousel__slide carousel__slide--active">
+            <img class="carousel__image" src="https://placehold.co/1200x400/000/fff?text=Image+1" alt="Carousel Image 1" />
+          </div>
+          <div class="carousel__slide">
+            <img class="carousel__image" src="https://placehold.co/1200x400/222/fff?text=Image+2" alt="Carousel Image 2" />
+          </div>
+          <div class="carousel__slide">
+            <img class="carousel__image" src="https://placehold.co/1200x400/444/fff?text=Image+3" alt="Carousel Image 3" />
+          </div>
+          <div class="carousel__slide">
+            <img class="carousel__image" src="https://placehold.co/1200x400/666/fff?text=Image+4" alt="Carousel Image 4" />
+          </div>
+          <div class="carousel__slide">
+            <img class="carousel__image" src="https://placehold.co/1200x400/888/fff?text=Image+5" alt="Carousel Image 5" />
+          </div>
+        </div>
+        <button class="carousel__button carousel__button--prev" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel__button carousel__button--next" aria-label="Next slide">&#10095;</button>
+        <div class="carousel__dots">
+          <button class="carousel__dot carousel__dot--active"></button>
+          <button class="carousel__dot"></button>
+          <button class="carousel__dot"></button>
+          <button class="carousel__dot"></button>
+          <button class="carousel__dot"></button>
+        </div>
+      </section>
+  
+    
     </main>
 
     <footer class="footer">
       <div class="footer-content">
-        <div class="footer-sign-up">
+        <!-- <div class="footer-sign-up">
           <h3>Don't miss out!</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -382,44 +431,9 @@
             <input type="email" placeholder="Your email here" />
             <button class="footer-btn" type="button">Sign up</button>
           </form>
-        </div>
+        </div> -->
 
-        <div class="footer-menu">
-          <div class="footer-box">
-            <div class="footer-box">
-              <h4>Products</h4>
-              <ul class="footer-nav">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-              </ul>
-            </div>
-            <h4>About us</h4>
-            <ul class="footer-nav">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-box">
-            <h4>Services</h4>
-            <ul class="footer-nav">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-box">
-            <h4>Contact</h4>
-            <ul class="footer-nav">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-            </ul>
-          </div>
-        </div>
+       
       </div>
       <div class="footerBottom">
         <div class="footerBottom-content">
